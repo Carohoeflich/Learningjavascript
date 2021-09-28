@@ -1,4 +1,5 @@
-
+    //variables: var, let and const exist. but we dont use var we dont like it. let lets you change its value later on, const never changes its value or type.
+    
     let x = 10;
     let y = 50;
 
@@ -6,14 +7,14 @@
     //inside the else brackets.
 
     if(x==y){  //conditions go in order, it will check if the first statement is true, if it is, it will ignore everything else.
-        console.log("X and Y are they same")
+        console.log("X and Y are the same")
     } else if(x > y ){ //if the first statement was false it will continue to check in order on this one.
-        console.log("X is not > than Y")
+        console.log("X is > than Y")
     } else { //if the last one were also to be false, it will now check this one.
         console.log("X and Y are not the same!")
     }
 
-    //switch example. normally when we have lots of data and if statements wouldnt cut it.
+    //switch example. normally when we have lots of data and IF statements wouldnt cut it.
 
     let day;
 
