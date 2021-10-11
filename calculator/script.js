@@ -15,11 +15,15 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString().slice(0,-1) //slices aka deletes just on string from the right to the left.
     }
 
-    appendNumber(number){
+    appendNumber(number){ //what occurs when you click on a number to appear on the screen
         if(number === '.' && this.currentOperand.includes('.')){ //an IF for just the period. so you only get to add one, and not constantly add periods.
             return
         }
         this.currentOperand = this.currentOperand.toString() + number.toString() //we need to convert it to string so js doesnt actually sum them as numbers, and just keeps adding them
+
+        if(number === '0'){
+            this.currentOperand = this.currentOperand.toString()
+        }
     }
 
     chooseOperation(operation){
