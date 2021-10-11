@@ -12,7 +12,7 @@ class Calculator {
     }
 
     delete(){
-        this.currentOperand = this.currentOperand.toString().slice(0,-1)
+        this.currentOperand = this.currentOperand.toString().slice(0,-1) //slices aka deletes just on string from the right to the left.
     }
 
     appendNumber(number){
@@ -86,6 +86,8 @@ class Calculator {
         if(this.operation != null){
             this.previousOperandTextElement.innerText =
             `${this.getDisplayNumber(this.previousOperand)}${this.operation}`;
+        } else{
+            this.previousOperandTextElement.innerText = ''
         }
     }
 }
@@ -98,7 +100,7 @@ const allClearButton = document.querySelector('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement) //creating a prototype for the class Calculator, so we can call on it using the "new" operator.
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
