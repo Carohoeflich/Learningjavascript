@@ -59,9 +59,26 @@ class Calculator {
     }
 
     getDisplayNumber(number){  //so the numbers display commas every 3 numbers
-        const floatNumber = parseFloat(number)
+        const stringNumber = number.toString()
+        const integerDigits = parseFloat(stringNumber.split('.')[0]) //this turns it into an array and the first part choses the part before the period, and the second part, AFTER the period
+        const decimalDigits = stringNumber.split('.')[1] //we dont need the parsefloat in this one, bc we dont need it to be a number
+        let integerDisplay
+        if (isNaN(integerDigits)){
+            integerDisplay = ''
+        } else {
+            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0})
+        }
+
+        if(decimalDigits != null){  //this means the user DID enter a period and some numbers AFTER it
+            return `${integerDisplay}.${decimalDigits}`;
+        }else {
+            return integerDisplay
+        }
+       
+       
+        /* const floatNumber = parseFloat(number)
         if(isNaN(floatNumber)) return ''
-        return floatNumber.toLocaleString('en') //en for english
+        return floatNumber.toLocaleString('en') //en for english */
     }
 
     updateDisplay(){
