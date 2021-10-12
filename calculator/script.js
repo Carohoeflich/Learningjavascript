@@ -20,10 +20,6 @@ class Calculator {
             return
         }
         this.currentOperand = this.currentOperand.toString() + number.toString() //we need to convert it to string so js doesnt actually sum them as numbers, and just keeps adding them
-
-        if(number === '0'){
-            this.currentOperand = this.currentOperand.toString()
-        }
     }
 
     chooseOperation(operation){
@@ -48,7 +44,7 @@ class Calculator {
             case '-':
                 computation = prev - current
             break;
-            case '*':
+            case 'x':
                 computation = prev * current
             break;
             case '÷':
