@@ -78,3 +78,8 @@ for (let i = 0; i < 10; i++) {
   }
 
 }
+
+// *************summary**********
+// while – The condition is checked before each iteration.
+// do..while – The condition is checked after each iteration.
+// for (;;) – The condition is checked before each iteration, additional settings available.
