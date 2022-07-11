@@ -20,12 +20,12 @@ const datos = [{
 // }
 
 //simulando retraso de API para poder usar async await. Este codigo regresa undefined porque no hay nada que haga que espere ese 1.5 segundo
- const getDatos = () => {
-     setTimeout(() => {  
-        return datos; 
-     }, 1500)
- }
- console.log(getDatos());
+//  const getDatos = () => {
+//      setTimeout(() => {  
+//         return datos; 
+//      }, 1500)
+//  }
+//  console.log(getDatos());
 
 
 const getDatos = () => {
